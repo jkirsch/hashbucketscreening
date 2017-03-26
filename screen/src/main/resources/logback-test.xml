@@ -1,0 +1,40 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %-5level [%thread] %logger{60} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+    <logger name="edu.tuberlin.ml.spark" level="DEBUG"/>
+    <logger name="org.jblas" level="DEBUG"/>
+
+    <logger name="org.eclipse.jetty" level="WARN"/>
+    <logger name="org.apache.hadoop.conf" level="WARN"/>
+    <logger name="org.apache.spark.scheduler" level="WARN"/>
+    <logger name="org.apache.spark.SecurityManager" level="WARN"/>
+    <logger name="org.apache.spark.storage" level="WARN"/>
+    <logger name="org.spark_project.jetty.server" level="WARN"/>
+    <logger name="org.apache.spark.ui" level="WARN"/>
+    <logger name="org.apache.spark.SparkContext" level="WARN"/>
+
+    <logger name="org.apache.spark.executor.Executor" level="WARN"/>
+    <logger name="org.apache.hadoop.util" level="OFF"/>
+
+
+    <logger name="edu.berkeley.compbio.jlibsvm" level="DEBUG"/>
+    <logger name="de.bwaldvogel.liblinear" level="DEBUG"/>
+    <logger name="com.github.fommil.netlib" level="INFO"/>
+
+
+    <!--<logger name="org.apache.spark.runtime.operators.RegularPactTask" level="OFF"/>-->
+    <!--<logger name="org.apache.spark.runtime.client.JobClient" level="OFF"/>-->
+    <!--<logger name="org.apache.spark.runtime.taskmanager.Task" level="OFF"/>-->
+    <!--<logger name="org.apache.spark.runtime.jobmanager.JobManager" level="OFF"/>-->
+    <!--<logger name="org.apache.spark.runtime.taskmanager.TaskManager" level="OFF"/>-->
+    <!--<logger name="org.apache.spark.runtime.executiongraph.ExecutionGraph" level="OFF"/>-->
+    <!--<logger name="org.apache.spark.runtime.jobmanager.EventCollector" level="OFF"/>-->
+</configuration>
